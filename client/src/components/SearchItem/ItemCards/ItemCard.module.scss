@@ -1,0 +1,20 @@
+@import "../../../styles/sass/globals.scss";
+
+.itemCardContainer {
+  @include flexColumn();
+  margin-bottom: 32px;
+  background-color: white;
+  border-radius: 4px;
+
+  a {
+    text-decoration: none;
+    color: inherit;
+  }
+
+  .itemCard {
+    @include setMargin($margin: 16px, $margin-b: 0px);
+    @include flexRow($justifyContent: flex-start, $alingItems: center);
+    padding-bottom: 16px;
+    border-bottom: 3px solid $bgLightGray;
+  }
+}

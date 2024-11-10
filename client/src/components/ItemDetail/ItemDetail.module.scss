@@ -1,0 +1,31 @@
+@use "../../styles/sass/variable/mediaQueries" as mediaQuery;
+@import "../../styles/sass/globals.scss";
+
+.divContainer {
+  .itemDetailContainer {
+    @include container();
+    @include flexRow();
+    background-color: white;
+    border-radius: 4px;
+    margin-bottom: 32px;
+
+    .leftColumn {
+      @include container($width: 60%);
+      @include flexColumn($alingItems: flex-start);
+      @include setPadding($padding: 32px);
+    }
+
+    .rightColumn {
+      @include container($width: 40%);
+      @include flexColumn($alingItems: flex-start);
+      @include setPadding($padding: 32px);
+      margin: 0 0 auto;
+    }
+
+    @media #{mediaQuery.$xl} {
+      @include container($width: 100vw, $height: 100%);
+      @include setWidth($md-px);
+      @include flexColumn();
+    }
+  }
+}

@@ -1,0 +1,29 @@
+@use "../../../styles/sass/variable/mediaQueries" as mediaQuery;
+@import "../../../styles/sass/globals.scss";
+
+.descriptionStyle {
+  @include setDimension($width: 50%, $height: auto);
+  @include setWidth($width: 90%);
+
+  .descriptionTitleContainer {
+    margin-top: 32px;
+    span {
+      @include defaultFormat($fontSize: $fontSizeXL);
+    }
+  }
+
+  .descriptionContainer {
+    p {
+      @include defaultFormat($fontSize: $fontSizeS, $textColor: $bgGray);
+      margin-top: 32px;
+    }
+  }
+  @media #{mediaQuery.$xl} {
+    @include container($width: 80vw, $height: 100%);
+    @include flexColumn();
+    justify-content: center;
+    .descriptionContainer {
+      @include setWidth($width: 80%);
+    }
+  }
+}

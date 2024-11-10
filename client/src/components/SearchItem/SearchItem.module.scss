@@ -1,0 +1,5 @@
+@import "../../styles/sass/globals.scss";
+
+.itemsContainer {
+  @include container();
+}

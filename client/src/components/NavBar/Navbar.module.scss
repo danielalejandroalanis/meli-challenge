@@ -1,0 +1,20 @@
+@import "../../styles/sass/globals.scss";
+
+.navbarContainer {
+  @include container-fluid($width: 100vw, $height: 80px);
+  background-color: $bgYellow;
+  .contentContainer {
+    @include container($width: 80vw, $height: 80px);
+    @include flexRow($alingItems: center);
+
+    .logoContainer {
+      @include flexRow($justifyContent: flex-start, $alingItems: center);
+      @include simpleContainer($width: 80px, $height: 100%);
+    }
+
+    .searchBarContainer {
+      @include flexRow($justifyContent: flex-end, $alingItems: center);
+      @include simpleContainer($width: 75vw, $height: 100%);
+    }
+  }
+}

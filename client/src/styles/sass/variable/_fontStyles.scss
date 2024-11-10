@@ -1,0 +1,17 @@
+@import url("https://fonts.googleapis.com/css2?family=Nunito:wght@400;700&display=swap");
+
+$fontSizeXXS: 12px;
+$fontSizeXS: 14px;
+$fontSizeS: 16px;
+$fontSizeM: 18px;
+$fontSizeL: 24px;
+$fontSizeXL: 28px;
+$fontSizeXXL: 46px;
+
+@mixin defaultFormat($fontSize, $textColor: black, $fontWeight: normal) {
+  font-family: "Nunito", sans-serif;
+  font-size: $fontSize;
+  color: $textColor;
+  font-weight: $fontWeight;
+  text-decoration: none;
+}

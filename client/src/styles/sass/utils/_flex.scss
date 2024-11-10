@@ -1,0 +1,54 @@
+@mixin flex(
+  $direction,
+  $wrap,
+  $justifyContent,
+  $alingItems,
+  $alingContent,
+  $gap
+) {
+  display: flex;
+  flex-flow: $direction $wrap;
+  justify-content: $justifyContent;
+  align-items: $alingItems;
+  align-content: $alingContent;
+  gap: $gap;
+}
+
+@mixin flexRow(
+  $wrap: nowrap,
+  $justifyContent: center,
+  $alingItems: stretch,
+  $alingContent: stretch,
+  $gap: 0
+) {
+  @include flex(row, $wrap, $justifyContent, $alingItems, $alingContent, $gap);
+}
+
+@mixin flexColumn(
+  $wrap: nowrap,
+  $justifyContent: center,
+  $alingItems: stretch,
+  $alingContent: stretch,
+  $gap: 0
+) {
+  @include flex(
+    column,
+    $wrap,
+    $justifyContent,
+    $alingItems,
+    $alingContent,
+    $gap
+  );
+}
+
+@mixin flexItemAttributes(
+  $align: auto,
+  $basis: auto,
+  $grow: auto,
+  $shrink: auto
+) {
+  align-self: $align;
+  flex-basis: $basis;
+  flex-grow: $grow;
+  flex-shrink: $shrink;
+}

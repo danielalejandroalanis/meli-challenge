@@ -1,0 +1,13 @@
+@use "../../../../styles/sass/globals" as *;
+
+.itemImg {
+  width: 180px;
+  height: 180px;
+  margin-right: 16px;
+  position: relative;
+
+  .ImageStyle {
+    border: 0;
+    border-radius: 4px;
+  }
+}

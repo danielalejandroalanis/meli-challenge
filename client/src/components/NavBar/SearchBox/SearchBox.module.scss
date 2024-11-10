@@ -1,0 +1,31 @@
+@import "../../../styles/sass/globals.scss";
+
+.formStyle {
+  @include flexRow($alingItems: center);
+  .inputStyle {
+    @include setHeight(45px);
+    @include setWidth(70vw);
+    @include defaultFormat($fontSize: $fontSizeM, $textColor: $bgGray);
+    padding: 1rem;
+    background-color: white;
+    border: none;
+    border-radius: 4px 0 0 4px;
+  }
+  .buttonStyle {
+    @include setHeight(45px);
+    @include setWidth(45px);
+    background-color: $bgLightGray;
+    border: none;
+    border-radius: 0 4px 4px 0;
+    transition: background-color 0.2s ease-in-out;
+
+    &:hover {
+      background-color: darken($bgLightGray, 10%);
+    }
+
+    .icoSize {
+      @include setHeight(25px);
+      @include setWidth(25px);
+    }
+  }
+}

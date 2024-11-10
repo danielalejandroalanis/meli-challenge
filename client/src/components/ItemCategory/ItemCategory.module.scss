@@ -1,0 +1,10 @@
+@import "../../styles/sass/globals.scss";
+
+.categoryContainer {
+  @include container();
+  @include setMargin-y($margin-y: 16px);
+  @include defaultFormat($fontSize: $fontSizeXS, $textColor: $bgGray);
+  .lastCategorySpan {
+    @include defaultFormat($fontSize: $fontSizeXS, $textColor: $bgDarkGray);
+  }
+}

@@ -1,0 +1,26 @@
+@use "../../../styles/sass/variable/mediaQueries" as mediaQuery;
+@import "../../../styles/sass/globals.scss";
+
+.buttonStyle {
+  margin: 0 0 auto;
+  @include setWidth($width: 100%);
+  button {
+    @include setPadding($padding: 16px);
+    @include setWidth($width: 100%);
+
+    @include defaultFormat($fontSize: $fontSizeM, $textColor: white);
+
+    background-color: $bgBlue;
+    border: 0;
+    border-radius: 4px;
+    transition: background-color 0.2s ease-in-out;
+
+    &:hover {
+      background-color: darken($bgBlue, 10%);
+    }
+  }
+  @media #{mediaQuery.$xl} {
+    @include setWidth($width: 50%);
+    margin: 0 auto;
+  }
+}

@@ -1,0 +1,25 @@
+@import "../../../../styles/sass/globals.scss";
+
+.itemData {
+  @include setDimension($width: 50%, $height: 180px);
+  padding-top: 16px;
+
+  .priceShippingContainer {
+    @include flexRow($justifyContent: flex-start, $alingItems: center);
+    span {
+      @include defaultFormat($fontSize: $fontSizeL);
+    }
+    .freeShipping {
+      @include setDimension($width: 25px, $height: 25px);
+      @include setMargin-x($margin-x: 10px);
+      @include setPadding($padding: 3px);
+      background-color: greenyellow;
+      border-radius: 50%;
+    }
+  }
+
+  h2 {
+    @include defaultFormat($fontSize: $fontSizeM);
+    margin-top: 32px;
+  }
+}

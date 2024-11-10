@@ -1,0 +1,6 @@
+@import "../../../styles/sass/globals.scss";
+
+.imgContainer {
+  @include setDimension($width: 60px, $height: 60px);
+  position: relative;
+}

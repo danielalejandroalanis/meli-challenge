@@ -1,0 +1,130 @@
+@use "../variable/mediaQueries" as mediaQuery;
+
+//Setters
+@mixin setWidth($width) {
+  max-width: $width;
+  min-width: $width;
+  width: $width;
+}
+
+@mixin setHeight($height) {
+  max-height: $height;
+  min-height: $height;
+  height: $height;
+}
+
+@mixin setDimension($width, $height) {
+  @include setWidth($width);
+  @include setHeight($height);
+}
+
+@mixin setMargin(
+  $margin: 0,
+  $margin-l: $margin,
+  $margin-r: $margin,
+  $margin-b: $margin,
+  $margin-t: $margin
+) {
+  margin-left: $margin-l;
+  margin-right: $margin-r;
+  margin-bottom: $margin-b;
+  margin-top: $margin-t;
+}
+
+@mixin setMargin-x($margin-x) {
+  margin-left: $margin-x;
+  margin-right: $margin-x;
+}
+
+@mixin setMargin-y($margin-y) {
+  margin-top: $margin-y;
+  margin-bottom: $margin-y;
+}
+
+@mixin setPadding(
+  $padding: 0,
+  $padding-l: $padding,
+  $padding-r: $padding,
+  $padding-b: $padding,
+  $padding-t: $padding
+) {
+  padding-left: $padding-l;
+  padding-right: $padding-r;
+  padding-bottom: $padding-b;
+  padding-top: $padding-t;
+}
+
+@mixin setPadding-x($padding-x) {
+  padding-left: $padding-x;
+  padding-right: $padding-x;
+}
+
+@mixin setPadding-y($padding-y) {
+  padding-top: $padding-y;
+  padding-bottom: $padding-y;
+}
+
+//Modeling
+@mixin container-fluid(
+  $padding-x: auto,
+  $margin-x: auto,
+  $width: 100vw,
+  $height: auto
+) {
+  @include setMargin-x($margin-x);
+  @include setPadding-x($padding-x);
+  @include setWidth($width);
+  @include setHeight($height);
+
+  //Small
+  @media #{mediaQuery.$sm} {
+    @include setMargin-x($margin-x);
+    @include setPadding-x($margin-x);
+    @include setWidth($sm-px);
+  }
+  //Medium
+  @media #{mediaQuery.$md} {
+    @include setMargin-x($margin-x);
+    @include setPadding-x($margin-x);
+    @include setWidth($md-px);
+  }
+  //Large
+  @media #{mediaQuery.$lg} {
+    @include setMargin-x($margin-x);
+    @include setPadding-x($margin-x);
+    @include setWidth($lg-px);
+  }
+  //Extra - Large
+  @media #{mediaQuery.$xl} {
+    @include setMargin-x($margin-x);
+    @include setPadding-x($margin-x);
+    @include setWidth($xl-px);
+  }
+  //Extra extra - Large
+  @media #{mediaQuery.$xxl} {
+    @include setMargin-x($margin-x);
+    @include setPadding-x($margin-x);
+    @include setWidth($xxl-px);
+  }
+}
+
+@mixin container(
+  $padding-x: auto,
+  $margin-x: auto,
+  $width: 80vw,
+  $height: auto
+) {
+  @include container-fluid($padding-x, $margin-x, $width, $height);
+}
+
+@mixin simpleContainer(
+  $padding-x: auto,
+  $margin-x: auto,
+  $width: 100vw,
+  $height: auto
+) {
+  @include setMargin-x($margin-x);
+  @include setPadding-x($padding-x);
+  @include setWidth($width);
+  @include setHeight($height);
+}

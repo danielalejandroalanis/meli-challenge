@@ -1,0 +1,13 @@
+//Globals
+* {
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+}
+//Utils
+@import "./utils/container";
+@import "./utils/flex";
+//Variables
+@import "./variable/colors";
+@import "./variable/fontStyles";
+@import "./variable/mediaQueries";

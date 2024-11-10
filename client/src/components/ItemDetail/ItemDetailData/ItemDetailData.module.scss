@@ -1,0 +1,28 @@
+@use "../../../styles/sass/variable/mediaQueries" as mediaQuery;
+@import "../../../styles/sass/globals.scss";
+
+.dataContainer {
+  margin: 0 auto;
+  .conditionContainer {
+    margin-bottom: 16px;
+    @include defaultFormat($fontSize: $fontSizeXS, $textColor: $bgDarkGray);
+  }
+
+  .titleContainer {
+    @include defaultFormat($fontSize: $fontSizeL);
+  }
+
+  .amountContainer {
+    @include setMargin-y($margin-y: 32px);
+    @include defaultFormat($fontSize: $fontSizeXXL);
+  }
+
+  @media #{mediaQuery.$xl} {
+    @include container($width: 80vw, $height: 100%);
+    @include flexColumn();
+    justify-content: center;
+    .titleContainer {
+      @include setWidth($width: 80%);
+    }
+  }
+}
