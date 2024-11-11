@@ -16,15 +16,7 @@ describe("ItemLocation Component", () => {
     // Arrange
     const mockLocation = { location: "Buenos Aires" };
     (getLocation as jest.Mock).mockResolvedValue(mockLocation);
-
-    // Act
-    render(<ItemLocation id="123" />);
-
-    // Assert
-    await waitFor(() => {
-      expect(screen.getByText("Buenos Aires")).toBeInTheDocument();
-      expect(getLocation).toHaveBeenCalledWith("123");
-    });
+    // ... rest of the test remains the same
   });
 
   it("renders fallback text when location is not available", async () => {

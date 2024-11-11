@@ -6,5 +6,6 @@ export const getCategories = async (id: string) => {
     return response.data;
   } catch (err) {
     console.log(err);
+    throw err;
   }
 };
