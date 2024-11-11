@@ -32,7 +32,6 @@ describe("SearchItem", () => {
       expect(screen.getByText(category, { exact: false })).toBeInTheDocument();
     });
 
-    // Check if item content is rendered
     expect(screen.getByText("Test Product")).toBeInTheDocument();
     expect(screen.getByRole("img")).toHaveAttribute(
       "src",
